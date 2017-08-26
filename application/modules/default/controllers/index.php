@@ -12,9 +12,9 @@ class Index extends MY_Controller{
         if($this->agent->mobile()){
             $detect = new Mobile_Detect();
             if( $detect->isTablet() ){
-                $this->load->view('components/header',$this->_data);
+                $this->load->view('desktop/components/header',$this->_data);
                 $this->load->view('index',$this->_data);
-                $this->load->view('components/footer');
+                $this->load->view('desktop/components/footer');
                 return;
             }
             $this->load->view('mobile/components/header',$this->_data);
@@ -22,9 +22,9 @@ class Index extends MY_Controller{
             $this->load->view('mobile/components/footer');
             return;
         }
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('index',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
 	}
     
     public function follow() {

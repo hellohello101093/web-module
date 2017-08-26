@@ -20,9 +20,9 @@ class Category extends MY_Controller{
             $this->load->view('mobile/components/footer');
             return;
         }
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('category/index',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
 	}
     public function child($link){
         $category = $this->mcategory->getByLink($link);
@@ -43,9 +43,9 @@ class Category extends MY_Controller{
             $this->load->view('mobile/components/footer');
             return;
         }
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('category/index',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
 	}
     
     public function loadMore(){

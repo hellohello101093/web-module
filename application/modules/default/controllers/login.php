@@ -9,9 +9,9 @@ class Login extends MY_Controller{
         $this->_data['description'] = 'Đăng nhập - '.$this->mconfig->getByKey('page_description');
         $this->_data['activeMenu'] ='home';
         $this->_data['slider_box'] = 'slider/slider_other';
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('login/index',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
 	}
     
     public function validate(){
@@ -120,9 +120,9 @@ class Login extends MY_Controller{
         $this->_data['keyword'] = 'Đăng Ký - '.$this->mconfig->getByKey('page_keyword');
         $this->_data['description'] = 'Đăng Ký - '.$this->mconfig->getByKey('page_description');
         $this->_data['slider_box'] = 'slider/slider_other';
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('login/signup',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
     }
     
     public function signout(){
@@ -170,8 +170,8 @@ class Login extends MY_Controller{
         $this->_data['description'] = 'Quên mật khẩu - '.$this->mconfig->getByKey('page_description');
         $this->_data['activeMenu'] ='home';
         $this->_data['slider_box'] = 'slider/slider_other';
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('login/forgot',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
     }
  }

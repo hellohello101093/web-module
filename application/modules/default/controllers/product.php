@@ -43,9 +43,9 @@ class Product extends MY_Controller{
             $this->load->view('mobile/components/footer');
             return;
         }
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('product/index',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
 	}
     public function detail($link){
         $this->_data['data'] = $this->mproduct->getByLink($link);
@@ -54,8 +54,8 @@ class Product extends MY_Controller{
         $this->_data['description'] = $this->_data['data']['info'].' - '.$this->mconfig->getByKey('page_description');
         $this->_data['activeMenu'] ='du-an-khach-hang';
         $this->_data['slider_box'] = 'slider/slider_other';
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('product/detail',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
     }
  }

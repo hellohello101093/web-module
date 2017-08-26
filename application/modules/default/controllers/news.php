@@ -39,9 +39,9 @@ class News extends MY_Controller{
         if($this->agent->mobile()){
             $detect = new Mobile_Detect();
             if( $detect->isTablet() ){
-                $this->load->view('components/header',$this->_data);
+                $this->load->view('desktop/components/header',$this->_data);
                 $this->load->view('news/index',$this->_data);
-                $this->load->view('components/footer');
+                $this->load->view('desktop/components/footer');
                 return;
             }
             $this->load->view('mobile/components/header',$this->_data);
@@ -49,9 +49,9 @@ class News extends MY_Controller{
             $this->load->view('mobile/components/footer');
             return;
         }
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('news/index',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
 	}
     
     public function detail($link){
@@ -67,9 +67,9 @@ class News extends MY_Controller{
         if($this->agent->mobile()){
             $detect = new Mobile_Detect();
             if( $detect->isTablet() ){
-                $this->load->view('components/header',$this->_data);
+                $this->load->view('desktop/components/header',$this->_data);
                 $this->load->view('news/detail',$this->_data);
-                $this->load->view('components/footer');
+                $this->load->view('desktop/components/footer');
                 return;
             }
             $this->load->view('mobile/components/header',$this->_data);
@@ -77,9 +77,9 @@ class News extends MY_Controller{
             $this->load->view('mobile/components/footer');
             return;
         }
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('news/detail',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
     }
     public function tags(){
         $tag = isset($_POST['tag']) ?  $_POST['tag']: '';
@@ -95,9 +95,9 @@ class News extends MY_Controller{
         if($this->agent->mobile()){
             $detect = new Mobile_Detect();
             if( $detect->isTablet() ){
-                $this->load->view('components/header',$this->_data);
+                $this->load->view('desktop/components/header',$this->_data);
                 $this->load->view('news/index',$this->_data);
-                $this->load->view('components/footer');
+                $this->load->view('desktop/components/footer');
                 return;
             }
             $this->load->view('mobile/components/header',$this->_data);
@@ -105,8 +105,8 @@ class News extends MY_Controller{
             $this->load->view('mobile/components/footer');
             return;
         }
-        $this->load->view('components/header',$this->_data);
+        $this->load->view('desktop/components/header',$this->_data);
         $this->load->view('news/index',$this->_data);
-        $this->load->view('components/footer');
+        $this->load->view('desktop/components/footer');
     }
  }
